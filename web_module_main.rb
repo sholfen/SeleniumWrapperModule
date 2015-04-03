@@ -19,5 +19,10 @@ sleep 2
 driver.save_screenshot 'google.png'
 driver.get 'http://tw.yahoo.com'
 sleep 2
+
+WebModule.SetTextById driver, 'UHSearchBox', 'aaa3'
+element =  driver.find_element :id => 'UHSearchWeb'
+element.click
+sleep 2
 driver.save_screenshot 'yahoo.png'
 driver.quit
